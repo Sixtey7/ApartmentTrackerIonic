@@ -21,4 +21,4 @@ angular.module('apartmentTracker', ['ionic'])
       StatusBar.styleDefault();
     }
   });
-})
+});

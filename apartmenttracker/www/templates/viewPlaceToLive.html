@@ -1,0 +1,293 @@
+<ion-view view-title="View Place!">
+  <ion-header-bar class="bar-stable">
+    <h2 class="title">View Place!</h2>
+  </ion-header-bar>
+
+  <ion-content direction="y">
+  <!--ion-scroll direction="y" zooming="true"-->
+    <div class="card" id="general_card">
+      <div class="item item-text-wrap">
+
+        <!--label class="item item-input" id="general-name">
+          <span class="input-label">Name</span>
+          <span> {{placeToLive.name}} </span>
+        </label-->
+
+        <ion-item>
+          <ion-label fixed>Name</ion-label>
+          <span> {{placeToLive.name}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>State</ion-label>
+          <span> {{placeToLive.state}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Address</ion-label>
+          <span> {{placeToLive.address1}} </span>
+          <br />
+          <span> {{placeToLive.address2}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Style</ion-label>
+          <span> {{placeToLive.style}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Office Hours</ion-label>
+          <span> {{placeToLive.officeHours}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Phone</ion-label>
+          <span> {{placeToLive.phone}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Website</ion-label>
+          <span> {{placeToLive.website}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Num Beds</ion-label>
+          <span> {{placeToLive.numBeds}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Num Baths</ion-label>
+          <span> {{placeToLive.numBaths}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Num Floors</ion-label>
+          <span> {{placeToLive.numFloors}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Sq Ft</ion-label>
+          <span> {{placeToLive.sqFt}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Rating</ion-label>
+          <span> {{placeToLive.rating}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>1st Fl BR</ion-label>
+          <span> {{placeToLive.firstFloorBR}} </span>
+        </ion-item>
+      </div>
+    </div>
+
+    <div class="card" id="amenities_card">
+      <div class="item item-text-wrap">
+        <ion-item>
+          <ion-label stacked>Dishwasher</ion-label>
+          <span> {{placeToLive.dishwasher | helloWorld}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Disposal</ion-label>
+          <span> {{placeToLive.disposal | helloWorld}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Range</ion-label>
+          <span> {{placeToLive.range}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>AC</ion-label>
+          <span> {{placeToLive.ac}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Heat</ion-label>
+          <span> {{placeToLive.heat}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Heat Source</ion-label>
+          <span> {{placeToLive.heatSource}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Washer/Dryer</ion-label>
+          <span> {{placeToLive.wd}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Garage</ion-label>
+          <span> {{placeToLive.garage}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Attic</ion-label>
+          <span> {{placeToLive.attic}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Basement</ion-label>
+          <span> {{placeToLive.basement}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Counters</ion-label>
+          <span> {{placeToLive.counters}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>FiOS</ion-label>
+          <span> {{placeToLive.fios | helloWorld}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Fireplace</ion-label>
+          <span> {{placeToLive.fireplace}} </span>
+        </ion-item>
+      </div>
+    </div>
+    <div class="card" id="complex_card">
+      <div class="item item-text-wrap">
+
+        <ion-item>
+          <ion-label stacked>Fitness Center</ion-label>
+          <span> {{placeToLive.fitnessCenter | helloWorld}} </span>
+        </ion-item>
+
+        <ion-item ng-show="placeToLive.fitnessCenter">
+          <ion-label stacked>Fitness Center Fee</ion-label>
+          <span> {{placeToLive.fitnessCenterFee}} </span>
+        </ion-item>
+
+        <ion-item ng-show="placeToLive.fitnessCenter">
+          <ion-label stacked>Fitness Center Fee Term</ion-label>
+          <span> {{placeToLive.fitnessCenterFeeTerm}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Pool</ion-label>
+          <span> {{placeToLive.pool | helloWorld}} </span>
+        </ion-item>
+
+        <ion-item ng-show="placeToLive.pool">
+          <ion-label stacked>Pool Fee</ion-label>
+          <span> {{placeToLive.poolFee}} </span>
+        </ion-item>
+
+        <ion-item ng-show="placeToLive.pool">
+          <ion-label stacked>Pool Fee Term</ion-label>
+          <span> {{placeToLive.poolFeeTerm}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Dog Space</ion-label>
+          <span> {{placeToLive.dogSpace | helloWorld}} </span>
+        </ion-item>
+      </div>
+    </div>
+
+    <div class="card" id="distance_card">
+      <div class="item item-text-wrap">
+
+        <ion-item>
+          <ion-label stacked>Pat Work Distance (Mi)</ion-label>
+          <span> {{placeToLive.patWorkDistance}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Pat Work Time (Min)</ion-label>
+          <span> {{placeToLive.patWorkTime}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>SRT Distance (Mi)</ion-label>
+          <span> {{placeToLive.srtDistance}} </span>
+        </ion-item>
+      </div>
+    </div>
+
+    <div class="card" id="price_card">
+      <div class="item item-text-wrap">
+        <ion-item>
+          <ion-label stacked>Price</ion-label>
+          <span> {{placeToLive.price}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Length (Months)</ion-label>
+          <span> {{placeToLive.termLength}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Security Deposit</ion-label>
+          <span> {{placeToLive.securityDeposit}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>HOA</ion-label>
+          <span> {{placeToLive.hoaFee}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>HOA Term</ion-label>
+          <span> {{placeToLive.hoaFeeTerm}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>SD Type</ion-label>
+          <span> {{placeToLive.securityDepositType}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Water Included</ion-label>
+          <span> {{placeToLive.waterIncluded | helloWorld}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Sewer Included</ion-label>
+          <span> {{placeToLive.sewerIncluded | helloWorld}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Trash Included</ion-label>
+          <span> {{placeToLive.trashIncluded | helloWorld}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Gas Included</ion-label>
+          <span> {{placeToLive.gasIncluded | helloWorld}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Electric Included</ion-label>
+          <span> {{placeToLive.electricIncluded | helloWorld}} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Dog Fee</ion-label>
+          <span> {{placeToLive.dogFee }} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Dog Fee Term</ion-label>
+          <span> {{placeToLive.dogFeeTerm }} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Dog Deposit</ion-label>
+          <span> {{placeToLive.dogDeposit }} </span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Dog Deposit Refund</ion-label>
+          <span> {{placeToLive.dogDepositRefundable | helloWorld }} </span>
+        </ion-item>
+      </div>
+    </div>
+  <!--/ion-scroll-->
+  </ion-content>
+</ion-view>
